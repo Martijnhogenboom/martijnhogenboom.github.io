@@ -26,3 +26,9 @@
         nav a:hover {
             text-decoration: underline;
         }
+        .kleur-box {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            display: inline-block;
+        }
