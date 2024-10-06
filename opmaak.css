@@ -1,134 +1,84 @@
-/* Algemene stijlen */
+/* Algemene opmaak voor de body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
 }
 
-h1, h2, h3 {
-    color: #333;
-}
-
-p {
-    margin: 20px;
-}
-
-/* Header-styling */
+/* Header opmaak */
 header {
-    background-color: #0077cc;
-    color: white;
-    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-}
-
-/* Navigatie-styling */
+/* Navigatie menu */
 nav {
-    background-color: #333;
+    background-color: #444;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+    list-style-type: none;
     margin: 0;
-    text-align: center;
+    padding: 0;
+    overflow: hidden;
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: 10px;
+    float: left;
 }
 
 nav ul li a {
-    text-decoration: none;
+    display: block;
     color: white;
-    padding: 15px 20px;
-    display: inline-block;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
 }
 
 nav ul li a:hover {
-    background-color: #0077cc;
+    background-color: #555;
 }
 
-/* Submenu styling */
-.second-level-menu {
+/* Dropdown menu styling */
+nav ul ul {
     display: none;
     position: absolute;
-    background-color: #333;
-    padding: 10px;
+    background-color: #444;
+    padding: 0;
 }
 
-nav ul li:hover .second-level-menu {
+nav ul ul li {
+    float: none;
+}
+
+nav ul ul li a {
+    padding: 10px 20px;
+}
+
+nav ul li:hover > ul {
     display: block;
 }
 
-.second-level-menu li {
-    display: block;
-    margin: 0;
+/* Zorgen dat dropdown-items mooi uitlijnen onder het hoofdmenu-item */
+nav ul ul {
+    top: 100%;
+    left: 0;
 }
 
-.second-level-menu li a {
-    display: block;
-    margin: 5px 0;
-}
-
-/* Stijl voor tabellen */
-table {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid #333;
-}
-
-th, td {
-    padding: 10px;
-    text-align: center;
-    background-color: #f9f9f9;
-}
-
-th {
-    background-color: #0077cc;
-    color: white;
-}
-
-/* Afbeelding styling */
-img {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Kleurmodellen sectie */
-.kleur-box {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    display: inline-block;
-    border: 1px solid #333;
-}
-
-/* Responsive design */
+/* Responsieve aanpassing */
 @media (max-width: 768px) {
+    nav ul {
+        float: none;
+    }
+    
     nav ul li {
-        display: block;
-        margin: 10px 0;
+        float: none;
     }
     
-    .second-level-menu {
+    nav ul ul {
         position: static;
-    }
-    
-    table {
-        width: 100%;
     }
 }
