@@ -1,28 +1,134 @@
+/* Algemene stijlen */
 body {
-            font-family: Arial, sans-serif;
-            margin-left: 30;
-            padding: 0;
-        }
-        header {
-            background-color: lightblue;
-            padding: 20px;
-        }
-        nav {
-            background-color: yellow;
-            text-align: center;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav li {
-            display: inline;
-            margin-right: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: black;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+p {
+    margin: 20px;
+}
+
+/* Header-styling */
+header {
+    background-color: #0077cc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigatie-styling */
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #0077cc;
+}
+
+/* Submenu styling */
+.second-level-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul li:hover .second-level-menu {
+    display: block;
+}
+
+.second-level-menu li {
+    display: block;
+    margin: 0;
+}
+
+.second-level-menu li a {
+    display: block;
+    margin: 5px 0;
+}
+
+/* Stijl voor tabellen */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #333;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+th {
+    background-color: #0077cc;
+    color: white;
+}
+
+/* Afbeelding styling */
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Kleurmodellen sectie */
+.kleur-box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: inline-block;
+    border: 1px solid #333;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .second-level-menu {
+        position: static;
+    }
+    
+    table {
+        width: 100%;
+    }
+}
