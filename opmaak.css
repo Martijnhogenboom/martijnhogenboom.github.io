@@ -39,14 +39,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: #lightblue;
 }
 
 /* Dropdown menu styling */
 nav ul ul {
     display: none;
     position: absolute;
-    background-color: #444;
+    background-color: #white;
     padding: 0;
 }
 
