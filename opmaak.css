@@ -8,7 +8,7 @@ body {
 
 /* Header opmaak */
 header {
-    background-color: #yellow;
+    background-color: #white;
     color: #black;
     padding: 10px 0;
     text-align: center;
@@ -16,7 +16,7 @@ header {
 
 /* Navigatie menu */
 nav {
-    background-color: #444;
+    background-color: #Lightblue;
 }
 
 nav ul {
