@@ -3,20 +3,20 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #lightblue;
+    background-color: lightblue; /* Corrected color */
 }
 
 /* Header opmaak */
 header {
-    background-color: #lightblue;
-    color: #black;
+    background-color: lightblue; /* Corrected color */
+    color: black; /* Corrected color */
     padding: 10px 0;
     text-align: center;
 }
 
 /* Navigatie menu */
 nav {
-    background-color: #Lightblue;
+    background-color: lightblue;
 }
 
 nav ul {
@@ -24,30 +24,35 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    position: relative;
 }
 
 nav ul li {
     float: left;
+    position: relative; /* Required for positioning the dropdown */
 }
 
 nav ul li a {
     display: block; 
-    color: lightblue;
+    color: black; /* Corrected color */
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
 }
 
 nav ul li a:hover {
-    background-color: #lightblue;
+    background-color: #333; /* Changed hover background color */
+    color: white; /* Changed hover text color */
 }
 
 /* Dropdown menu styling */
 nav ul ul {
     display: none;
     position: absolute;
-    background-color: #white;
+    background-color: white;
     padding: 0;
+    list-style-type: none; /* Added to remove bullet points in dropdown */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Added shadow for better visibility */
 }
 
 nav ul ul li {
@@ -56,8 +61,15 @@ nav ul ul li {
 
 nav ul ul li a {
     padding: 10px 20px;
+    color: black; /* Dropdown text color */
+    white-space: nowrap; /* Prevents text wrapping */
 }
 
+nav ul ul li a:hover {
+    background-color: #ddd; /* Hover effect for dropdown items */
+}
+
+/* Show dropdown menu on hover */
 nav ul li:hover > ul {
     display: block;
 }
