@@ -1,3 +1,11 @@
+.tekst-container {
+Padding-bottom: 150px;
+Padding-top: 39px;
+padding-left: 15px;
+Padding-right: 15px;
+Min-heigt: 78vh;
+Box-sizing: Border-box;
+}
 .second-level-menu
 {
     position: absolute;
