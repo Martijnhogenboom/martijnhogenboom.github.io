@@ -1,13 +1,14 @@
 .tekst-container {
-Padding-bottom: 150px;
-Padding-top: 39px;
-padding-left: 15px;
-Padding-right: 15px;
-Min-heigt: 78vh;
-Box-sizing: Border-box;
+    padding-bottom: 150px;
+    padding-top: 39px;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 78vh; /* let op: verbeterd van 'Min-heigt' */
+    box-sizing: border-box; /* let op: verbeterd van 'Box-sizing' */
 }
-.second-level-menu
-{
+
+/* Submenu-instellingen */
+.second-level-menu {
     position: absolute;
     top: 30px;
     left: 0;
@@ -15,52 +16,51 @@ Box-sizing: Border-box;
     list-style: none;
     padding: 0;
     margin: 0;
-    display: none;
+    display: none; /* Blijft verborgen totdat je erover hovert */
 }
 
-.second-level-menu > li
-{
+.second-level-menu > li {
     position: relative;
     height: 30px;
     background: #00a8ff;
 }
-.second-level-menu > li:hover { background: #CCCCCC; }
+.second-level-menu > li:hover {
+    background: #CCCCCC;
+}
 
-.top-level-menu
-{
+/* Hoofdmenu-instellingen */
+.top-level-menu {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.top-level-menu > li
-{
+.top-level-menu > li {
     position: relative;
     float: left;
     height: 30px;
     width: 150px;
     background: #00a8ff;
 }
-.top-level-menu > li:hover { background: #CCCCCC; }
-
-.top-level-menu li:hover > ul
-{
-    /* On hover, display the next level's menu */
-    display: inline;
+.top-level-menu > li:hover {
+    background: #CCCCCC;
 }
 
+/* Submenu tonen bij hover */
+.top-level-menu li:hover > .second-level-menu {
+    display: block; /* Verbeterd van 'display: inline' naar 'display: block' */
+}
 
-/* Menu Link Styles */
-
-.top-level-menu a /* Apply to all links inside the multi-level menu */
-{
+/* Stijl voor de links in het menu */
+.top-level-menu a {
     font: bold 14px Arial, Helvetica, sans-serif;
     color: #FFFFFF;
     text-decoration: none;
     padding: 0 0 0 10px;
-
-    /* Make the link cover the entire list item-container */
     display: block;
     line-height: 30px;
 }
-.top-level-menu a:hover { color: #000000; }
+
+.top-level-menu a:hover {
+    color: #000000;
+}
