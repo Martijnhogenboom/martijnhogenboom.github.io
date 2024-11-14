@@ -1,34 +1,14 @@
+/* Basisstijl voor de tekstcontainer */
 .tekst-container {
     padding-bottom: 150px;
-    padding-top: 39px;
+    padding-top: 45px;
     padding-left: 15px;
     padding-right: 15px;
-    min-height: 78vh; /* let op: verbeterd van 'Min-heigt' */
-    box-sizing: border-box; /* let op: verbeterd van 'Box-sizing' */
+    min-height: 78vh;
+    box-sizing: border-box;
 }
 
-/* Submenu-instellingen */
-.second-level-menu {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    width: 150px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none; /* Blijft verborgen totdat je erover hovert */
-}
-
-.second-level-menu > li {
-    position: relative;
-    height: 30px;
-    background: #00a8ff;
-}
-.second-level-menu > li:hover {
-    background: #CCCCCC;
-}
-
-/* Hoofdmenu-instellingen */
+/* Stijlen voor het hoofdmenu */
 .top-level-menu {
     list-style: none;
     padding: 0;
@@ -41,22 +21,18 @@
     height: 30px;
     width: 150px;
     background: #00a8ff;
+    text-align: center;
 }
+
 .top-level-menu > li:hover {
     background: #CCCCCC;
 }
 
-/* Submenu tonen bij hover */
-.top-level-menu li:hover > .second-level-menu {
-    display: block; /* Verbeterd van 'display: inline' naar 'display: block' */
-}
-
-/* Stijl voor de links in het menu */
+/* Stijlen voor de links */
 .top-level-menu a {
     font: bold 14px Arial, Helvetica, sans-serif;
     color: #FFFFFF;
     text-decoration: none;
-    padding: 0 0 0 10px;
     display: block;
     line-height: 30px;
 }
@@ -64,3 +40,30 @@
 .top-level-menu a:hover {
     color: #000000;
 }
+
+/* Submenu (second-level-menu) stijl */
+.second-level-menu {
+    position: absolute;
+    top: 100%; /* Zet onder het hoofdmenu */
+    left: 0;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Verberg standaard */
+    background: #00a8ff;
+}
+
+.second-level-menu > li {
+    height: 30px;
+}
+
+.second-level-menu > li:hover {
+    background: #CCCCCC;
+}
+
+/* Toon het submenu wanneer je over het bovenliggende item zweeft */
+.top-level-menu > li:hover .second-level-menu {
+    display: block;
+}
+
