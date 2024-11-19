@@ -8,62 +8,68 @@
     box-sizing: border-box;
 }
 
-/* Stijlen voor het hoofdmenu */
-.top-level-menu {
-    list-style: none;
-    padding: 0;
+ul, li {
     margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.top-level-menu {
+    display: flex; 
+    background: #00a8ff;
+    padding: 0;
 }
 
 .top-level-menu > li {
-    position: relative;
-    float: left;
-    height: 30px;
+    position: relative; 
     width: 150px;
-    background: #00a8ff;
     text-align: center;
 }
 
-.top-level-menu > li:hover {
-    background: #CCCCCC;
-}
-
-/* Stijlen voor de links */
-.top-level-menu a {
+.top-level-menu > li a {
+    display: block;
     font: bold 14px Arial, Helvetica, sans-serif;
     color: #FFFFFF;
     text-decoration: none;
-    display: block;
     line-height: 30px;
-}
-
-.top-level-menu a:hover {
-    color: #000000;
-}
-
-/* Submenu (second-level-menu) stijl */
-.second-level-menu {
-    position: absolute;
-    top: 100%; /* Zet onder het hoofdmenu */
-    left: 0;
-    width: 150px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none; /* Verberg standaard */
     background: #00a8ff;
 }
 
-.second-level-menu > li {
-    height: 30px;
-}
-
-.second-level-menu > li:hover {
+.top-level-menu > li a:hover {
     background: #CCCCCC;
+    color: #000000;
 }
 
-/* Toon het submenu wanneer je over het bovenliggende item zweeft */
+
+.second-level-menu {
+    position: absolute; 
+    top: 100%;
+    left: 0;
+    width: 150px;
+    display: none; 
+    background: #00a8ff;
+    z-index: 10; 
+}
+
+.second-level-menu > li {
+    text-align: left;
+}
+
+.second-level-menu > li a {
+    font: normal 14px Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0 10px;
+    line-height: 30px;
+    background: #00a8ff;
+}
+
+.second-level-menu > li a:hover {
+    background: #CCCCCC;
+    color: #000000;
+}
+
 .top-level-menu > li:hover .second-level-menu {
-    display: block;
+    display: block; 
 }
-
+</style>
